@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Սպորտային աշխարհ</title>
+
+<style>
+
+/* Ընդհանուր ձևավորում */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f6f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Մենյու */
+
+header {
+    background: #12633e;
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #ffdc65;
+}
+
+/* Գլխավոր հատված */
+
+.hero {
+    background: linear-gradient(120deg, #bce8cc, #e1f5e8);
+    padding: 75px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #12633e;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.button {
+    display: inline-block;
+    background: #12633e;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #218b59;
+}
+
+/* Բաժիններ */
+
+section {
+    padding: 45px 7%;
+}
+
+.section-title {
+    text-align: center;
+    color: #12633e;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* Grid քարտեր */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px #cddbd0;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card .icon {
+    font-size: 50px;
+}
+
+.card h3 {
+    color: #12633e;
+    margin: 12px 0;
+}
+
+/* Flexbox հատված */
+
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 25px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+/* Մարզիկների բաժին */
+
+.athletes {
+    background: #e0f0e5;
+}
+
+/* Footer */
+
+footer {
+    background: #12633e;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Հարմարեցում հեռախոսներին */
+
+@media(max-width: 700px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ՄԵՆՅՈՒ -->
+
+<header>
+
+    <div class="logo">🏆 Սպորտային աշխարհ</div>
+
+    <nav>
+        <a href="#home">Գլխավոր</a>
+        <a href="#sports">Մարզաձևեր</a>
+        <a href="#athletes">Մարզիկներ</a>
+        <a href="#benefits">Օգտակարություն</a>
+        <a href="#events">Մրցումներ</a>
+    </nav>
+
+</header>
+
+<!-- ԳԼԽԱՎՈՐ -->
+
+<div class="hero" id="home">
+
+    <h1>Բարի գալուստ սպորտային աշխարհ</h1>
+
+    <p>
+    Սպորտը առողջություն է, ընկերություն,
+    ուժ և հաղթանակ։
+    </p>
+
+    <a href="#sports" class="button">
+    Բացահայտել մարզաձևերը
+    </a>
+
+</div>
+
+<!-- ՄԱՐԶԱՁԵՎԵՐ -->
+
+<section id="sports">
+
+    <h2 class="section-title">
+    Հանրահայտ մարզաձևեր
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">⚽</div>
+            <h3>Ֆուտբոլ</h3>
+            <p>
+            Ֆուտբոլը աշխարհի ամենահայտնի
+            թիմային մարզաձևերից է։
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏀</div>
+            <h3>Բասկետբոլ</h3>
+            <p>
+            Արագ և հետաքրքիր թիմային խաղ,
+            որտեղ գնդակը նետում են զամբյուղի մեջ։
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏐</div>
+            <h3>Վոլեյբոլ</h3>
+            <p>
+            Թիմային մարզաձև, որտեղ գնդակը
+            փոխանցում են ցանցի վրայով։
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏊</div>
+            <h3>Լող</h3>
+            <p>
+            Լողը զարգացնում է մարմնի
+            շարժունակությունը և դիմացկունությունը։
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🥋</div>
+            <h3>Կարատե</h3>
+            <p>
+            Մարտարվեստ, որը զարգացնում է
+            կարգապահությունն ու կենտրոնացումը։
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🚴</div>
+            <h3>Հեծանվասպորտ</h3>
+            <p>
+            Հետաքրքիր մարզաձև՝ հեծանիվով
+            մրցումների և զբոսանքի համար։
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ՀԱՅՏՆԻ ՄԱՐԶԻԿՆԵՐ -->
+
+<section class="athletes" id="athletes">
+
+    <h2 class="section-title">
+    Հայտնի հայ մարզիկներ
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">⚽</div>
+            <h3>Հենրիխ Մխիթարյան</h3>
+            <p>
+            Հայ հայտնի ֆուտբոլիստ։
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🥇</div>
+            <h3>Արթուր Ալեքսանյան</h3>
+            <p>
+            Օլիմպիական չեմպիոն,
+            հունահռոմեական ըմբշամարտիկ։
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">♟️</div>
+            <h3>Լևոն Արոնյան</h3>
+            <p>
+            Հայ հայտնի շախմատիստ։
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ՍՊՈՐՏԻ ՕԳՏԱԿԱՐՈՒԹՅՈՒՆԸ -->
+
+<section id="benefits">
+
+    <h2 class="section-title">
+    Ինչու՞ է կարևոր սպորտը
+    </h2>
+
+    <div class="flex-box">
+
+        <div class="flex-item">
+            <div class="icon">❤️</div>
+            <h3>Առողջություն</h3>
+            <p>Նպաստում է առողջ ապրելակերպին։</p>
+        </div>
+
+        <div class="flex-item">
+            <div class="icon">🤝</div>
+            <h3>Ընկերություն</h3>
+            <p>Սովորեցնում է համագործակցել։</p>
+        </div>
+
+        <div class="flex-item">
+            <div class="icon">🎯</div>
+            <h3>Նպատակասլացություն</h3>
+            <p>Օգնում է լինել հետևողական։</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ՄՐՑՈՒՄՆԵՐ -->
+
+<section class="athletes" id="events">
+
+    <h2 class="section-title">
+    Սպորտային մրցումներ
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🏅</div>
+            <h3>Օլիմպիական խաղեր</h3>
+            <p>
+            Աշխարհի տարբեր երկրների մարզիկների
+            մասնակցությամբ միջազգային մրցումներ։
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏆</div>
+            <h3>Ֆուտբոլի աշխարհի առաջնություն</h3>
+            <p>
+            Ֆուտբոլի ազգային հավաքականների
+            կարևորագույն մրցաշար։
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🥇</div>
+            <h3>Եվրոպայի առաջնություն</h3>
+            <p>
+            Եվրոպական երկրների մարզիկների
+            մասնակցությամբ մրցումներ։
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>Սպորտը մեր ուժն է։</h3>
+
+    <p>Շնորհակալություն այցելության համար։</p>
+
+    <p>Սպորտային աշխարհ © 2026</p>
+
+</footer>
+
+</body>
+</html>
